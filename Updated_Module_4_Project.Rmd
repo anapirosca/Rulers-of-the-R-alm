@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 # Introduction
-__inserting introduction here__
+@hagey2017there is a recent study that was concerned with the hindlimb-comorph relationship of anoles. 
 
 ::: {style="text-align: center;"}
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Green_anole.jpg/640px-Green_anole.jpg" alt="Drawing of Anole" />
