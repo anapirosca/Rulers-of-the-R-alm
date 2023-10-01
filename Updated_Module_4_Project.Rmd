@@ -14,8 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 __inserting introduction here__
 
 ::: {style="text-align: center;"}
-![Drawing of Anole](users/anapirosca/Desktop/Org. Bio/Project 3 Items/Rulers-of-the-R-alm/Anole_-_Dactyloidae)
-
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Green_anole.jpg/640px-Green_anole.jpg" alt="Drawing of Anole" />
 :::
 
 # Methods
