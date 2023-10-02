@@ -15,9 +15,10 @@ In the anole project, we are focusing on assessment of morphological and allomet
 
 <br>
 
-::: {style="text-align: center;"}
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Green_anole.jpg/640px-Green_anole.jpg" alt="Drawing of Anole" />
-:::
+<center>![Anolis lizard](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Green_anole.jpg/800px-Green_anole.jpg)</center>
+
+
+https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Green_anole.jpg/640px-Green_anole.jpg
 
 # Methods
 In order to answer our question, we will create four different PGLS models and then compare them to determine which has the best fit. To compare our models, we will use AIC operations, in particular AICc and AICw, and which ever model has the best results will tell us what the answer to our question is.
