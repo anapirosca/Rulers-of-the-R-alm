@@ -111,7 +111,7 @@ print(p.eco.phylo)
 The results indicate that the traits evolve randomly within each ecological niche. This signifies that each niche has a particular hind-limb to body length ratio that is advantageous there in particular. 
 
 # Author Contributions
-
+Ana produced the AIC table and wrote the Author Contributions. Lauren created the regression plot, and created the reference file. Blake added an image of an anole and wrote the introduction. Vanessa wrote the Methods, Results, and Discussion.
 
 # References
 
