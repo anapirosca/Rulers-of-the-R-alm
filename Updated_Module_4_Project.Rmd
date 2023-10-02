@@ -114,5 +114,3 @@ The results indicate that the traits evolve randomly within each ecological nich
 Ana produced the AIC table and wrote the Author Contributions. Lauren created the regression plot, and created the reference file. Blake added an image of an anole and wrote the introduction. Vanessa wrote the Methods, Results, and Discussion.
 
 # References
-
-@hagey2017there
