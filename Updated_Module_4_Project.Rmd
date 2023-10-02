@@ -11,13 +11,17 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 # Introduction
-@hagey2017there is a recent study that was concerned with the hindlimb-comorph relationship of anoles. 
+In the anole project, we are focusing on assessment of morphological and allometric differences within anoles, in particular, visualization and analyzation of hind-limb length and size covariation within niches. @hagey2017there is a recent study that was concerned with the hindlimb-ecomorph relationship of anoles. In this study, they phylogenetic GLS models to analyze their data, which are the same type of models that we will use to answer our question.
+
+<br>
 
 ::: {style="text-align: center;"}
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Green_anole.jpg/640px-Green_anole.jpg" alt="Drawing of Anole" />
 :::
 
 # Methods
+In order to answer our question, we will create four different PGLS models and then compare them to determine which has the best fit. To compare our models, we will use AIC operations, in particular AICc and AICw, and which ever model has the best results will tell us what the answer to our question is.
+
 ### Adding Code with Chunks
 ```{r}
 x<-1:100
@@ -50,6 +54,9 @@ anole.log <- anole2%>%
 ```
 
 # Results
+The results show that PGLS under BM with ecomorphological data is the best model. This can be taken to mean that the traits have evolved randomly within each lineage specifically.
+
+<br>
 
 ```{r, "PGLS models"}
 ### phylogenetic GLS models
@@ -61,7 +68,7 @@ pgls.BM1 <- gls(HTotal ~SVL, correlation = corBrownian(1,phy = anole.tree,form=~
 pgls.BM2 <- gls(HTotal ~SVL * Ecomorph2, correlation = corBrownian(1,phy = anole.tree,form=~Species),data = anole.log, method = "ML")
 
 #PGLS under OU, no ecomorph
-pgls.OU1 <- gls(HTotal ~SVL, correlation = corMartins(0,phy = anole.tree,form=~Species),data = anole.log, method = "ML")
+pgls.OU1 <- gls(HTotal ~SVL, correlation = corMartins(0,phy = anole.tree,form=~Species),data = anole.log, method = "ML") 
 
 #PGLS under OU, w, ecomorph
 pgls.OU2 <- gls(HTotal ~SVL * Ecomorph2, correlation = corMartins(0,phy = anole.tree,form=~Species),data = anole.log, method = "ML")
@@ -79,11 +86,11 @@ library(knitr)
 kable(anole.phylo.aic, caption = "AIC Summary for Anole Phylogenetic Models")
 ```
 
-```{r, "Regression Plot"}
+```{r, "Regression Plot", fig.cap="Regression plot of SVL and HTotal by ecomorphological data"}
 library(ggplot2)
 ggplot(anole.log, aes(x = SVL, y = HTotal, color = Ecomorph2)) +
   geom_point() +
-  geom_smooth(method = "lm", se = FALSE)
+  geom_smooth(method = "lm", se = FALSE) 
 ```
 
 ```{r, "add residuals"}
@@ -101,8 +108,10 @@ print(p.eco.phylo)
 ```
 
 # Discussion
+The results indicate that the traits evolve randomly within each ecological niche. This signifies that each niche has a particular hind-limb to body length ratio that is advantageous there in particular. 
 
 # Author Contributions
+
 
 # References
 
